@@ -29,6 +29,11 @@
   height: 50px; /* Ensures the full image is shown */
 }
 
+.control {
+  width: 50px;  /* Adjust icon size */
+  height: 50px; /* Ensures the full image is shown */
+}
+
 .box a {
   text-decoration: none;
   display: flex;
