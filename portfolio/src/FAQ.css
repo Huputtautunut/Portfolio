@@ -1,0 +1,35 @@
+.containerfaq {
+    width: 1000px;
+    height: 400px;
+    background-color: white;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 10px;
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 20px; /* Adds spacing inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for a nicer look */
+    position: fixed; /* Keeps the container stationary */
+    top: 50%; /* Centers vertically */
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    max-height: 80vh; /* Ensures it doesn't exceed viewport height */
+}
+
+/* Styles for Back Button */
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: White;
+    color: Black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}

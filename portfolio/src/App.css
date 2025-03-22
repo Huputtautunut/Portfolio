@@ -6,22 +6,26 @@
 
 .tooltip {
   position: absolute;
-  bottom: 80px; /* Position above the box */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: black;
+  background: rgba(0, 0, 0, 0.8);
   color: white;
-  padding: 6px 10px;
+  padding: 5px 10px;
   border-radius: 5px;
-  font-size: 14px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  pointer-events: none; /* Prevents blocking interactions */
+  z-index: 1000; /* Ensure tooltip is above everything */
+  top: 100%; /* Position below the box */
+  left: 50%;
+  width: max-content; /* Adapts to text size */
+  max-width: 200px; /* Prevents overly long tooltips */
+  white-space: normal; /* Allows wrapping */
+  word-wrap: break-word; /* Ensures long words break */
+  text-align: center; /* Centers text */
+  transform: translateX(-50%);
+  z-index: 1001; 
+  
 }
 
 .box:hover .tooltip {
   opacity: 1;
+  z-index: 1001; /* Even higher when hovered */
 }
 
 .icon {
@@ -45,12 +49,17 @@
 
 .button-box {
   cursor: pointer;
-  background-color: red; 
+  background-color: rgb(65, 93, 121); 
   transition: 0.3s;
 }
 
 .button-box:hover {
-  background-color: darkred;
+  opacity: 1;
+  z-index: 1001; /* Even higher when hovered */
+}
+
+.box:hover {
+  z-index: 1002; /* Make sure it's above other boxes */
 }
 
 
@@ -60,7 +69,10 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f4f4;
+  background-image: url("./assets/oskari.gif"); /* Path to your image */
+  background-size: cover; /* Cover the entire screen */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repetition */
 }
 
 .container {
@@ -73,21 +85,35 @@ body {
 }
 
 .circle {
-  width: 120px;
-  height: 120px;
-  background-color: blue;
+  width: 150px;
+  height: 150px;
+  background-color: #ffcc00;
   border-radius: 50%;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer; /* Ensures it's clickable */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.circle:hover {
+  background-color: #ffdd44;
+  transform: scale(1.1);
 }
 
 .button-box {
   cursor: pointer;
-  background-color: red; /* Change color for visibility */
+  background-color: white; /* Change color for visibility */
   transition: 0.3s;
 }
 
 .button-box:hover {
-  background-color: darkred;
+  background-color: white;
 }
 
 .boxes {
@@ -97,20 +123,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .box {
   width: 60px;
   height: 60px;
-  background-color: orange;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: black;
   border-radius: 8px;
+  pointer-events: auto; 
 }
 
 /* Positioning the boxes around the heptagon */
