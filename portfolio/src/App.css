@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 80px; /* Position above the box */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Prevents blocking interactions */
+}
+
+.box:hover .tooltip {
+  opacity: 1;
+}
+
+.icon {
+  width: 50px;  /* Adjust icon size */
+  height: 50px; /* Ensures the full image is shown */
+}
+
+.box a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.button-box {
+  cursor: pointer;
+  background-color: red; 
+  transition: 0.3s;
+}
+
+.button-box:hover {
+  background-color: darkred;
+}
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  background-color: blue;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.button-box {
+  cursor: pointer;
+  background-color: red; /* Change color for visibility */
+  transition: 0.3s;
+}
+
+.button-box:hover {
+  background-color: darkred;
+}
+
+.boxes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Positioning the boxes around the heptagon */
+.box:nth-child(1) { transform: translate(-140px, 20px); }  /* Left */
+.box:nth-child(2) { transform: translate(140px, 20px); }   /* Right */
+.box:nth-child(3) { transform: translate(0, -140px); }  /* Top */
+.box:nth-child(4) { transform: translate(-70px, 120px); }   /* Bottom */
+.box:nth-child(5) { transform: translate(-100px, -80px); } /* Top Left */
+.box:nth-child(6) { transform: translate(100px, -80px); }  /* Top Right */
+.box:nth-child(7) { transform: translate(70px, 120px); }   /* Bottom Right */
