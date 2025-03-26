@@ -83,7 +83,7 @@ function Home() {
                 <img src={myIcon3} alt="medal" className="icon" />
               </a>
             ) : i === 6 ? (
-              <a href="https://fi.pinterest.com/" target="_blank" rel="noopener noreferrer">
+              <a href="https://fi.pinterest.com/jonsku022/my-art/" target="_blank" rel="noopener noreferrer">
                 <img src={myIcon5} alt="brush" className="icon" />
               </a>
             ) 
