@@ -29,13 +29,32 @@ function Home() {
     "Astronomy and cosmology are a hobby of mine!",
     "I don't drink coffee, but I love tea!"
   ];
+const [remainingFacts, setRemainingFacts] = useState([...funFacts]);
+const [currentFact, setCurrentFact] = useState("");
 
-  const handleCircleClick = (event) => {
-    event.stopPropagation(); // Prevents parent event interference
-    console.log("Circle clicked!");
-    const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
-    setFunFact(randomFact);
-  };
+const handleCircleClick = (event) => {
+  event.stopPropagation(); // Prevents parent event interference
+  console.log("Circle clicked!");
+
+  if (remainingFacts.length === 0) {
+      // Refill the facts when all have been used
+      setRemainingFacts([...funFacts]);
+      return; // Exit early to avoid trying to access an empty array
+  }
+
+  // Get a random fact from the remaining ones
+  const index = Math.floor(Math.random() * remainingFacts.length);
+  const selectedFact = remainingFacts[index];
+
+  // Create a new array without the selected fact
+  const newRemainingFacts = remainingFacts.filter((_, i) => i !== index);
+
+  // Update state with new list and fact
+  setRemainingFacts(newRemainingFacts);
+  setFunFact(selectedFact);
+};
+
+
 
   const handleMouseEnter = (index) => setHoveredBox(index);
   const handleMouseLeave = () => setHoveredBox(null);
