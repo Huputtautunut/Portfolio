@@ -35,11 +35,11 @@ const FAQ = () => {
       <p>I'm trustworthy and a good worker. I do my job well, I'm flexible and a fast learner.
          I bring good humor with me and sometimes some baked goods. </p>
       <h2>What are your future goals?</h2>
-      <p>In professiobal life I would like to make a career in cybersecurity or in data-analytics. With
+      <p>In professional life I would like to make a career in cybersecurity or in data-analytics. With
         my freetime I would like to develop my artistic skills and maybe develop a small 8bit-style game.
       </p>
       <h2>Do you have any questions?</h2>
-      <p>Why is plural of goose, geese but moose is note meese?</p>
+      <p>Why is plural of goose, geese but moose is not meese?</p>
       </div>
       </div>
   );

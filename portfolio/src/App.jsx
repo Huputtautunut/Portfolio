@@ -3,10 +3,11 @@ import { useState } from "react";
 import "./App.css";
 import myIcon from "./assets/github-mark.png";
 import myIcon2 from "./assets/joystick.png";
-import myIcon3 from "./assets/medal.png";
-import myIcon4 from "./assets/graph.png";
-import myIcon5 from "./assets/brush.png";
-import myFAQIcon from "./assets/question.png"
+import myIcon3 from "./assets/prize1.png";
+import myIcon4 from "./assets/taulukko1.png";
+import myIcon5 from "./assets/tikku1.png";
+import myIcon7 from "./assets/under-construction.png";
+import myFAQIcon from "./assets/kyssari2.png"
 import FAQ from "./FAQ";
 
 function Home() {
@@ -64,7 +65,7 @@ const handleCircleClick = (event) => {
     "My infamous job hunting excel. It has more functions than this website",
     "My github where you can browse my projects",
     "FAQ and my answers",
-    "I need to put something here",
+    "A working process",
     "Want to play a job interview simulator I made a few years ago?",
     "All the certificates I have",
     "Want to see some of my art?",
@@ -104,6 +105,12 @@ const handleCircleClick = (event) => {
             ) : i === 6 ? (
               <a href="https://fi.pinterest.com/jonsku022/my-art/" target="_blank" rel="noopener noreferrer">
                 <img src={myIcon5} alt="brush" className="icon" />
+              </a>
+            ) 
+
+            : i === 3 ? (
+              <a >
+                <img src={myIcon7} alt="brush" className="icon" />
               </a>
             ) 
             
