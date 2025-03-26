@@ -56,10 +56,12 @@
 .button-box:hover {
   opacity: 1;
   z-index: 1001; /* Even higher when hovered */
+  
 }
 
 .box:hover {
   z-index: 1002; /* Make sure it's above other boxes */
+  background-color: #bcd4d3;
 }
 
 
@@ -113,7 +115,7 @@ body {
 }
 
 .button-box:hover {
-  background-color: white;
+  background-color: #bcd4d3;
 }
 
 .boxes {

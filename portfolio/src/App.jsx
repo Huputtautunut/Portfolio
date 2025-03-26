@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-route
 import { useState } from "react";
 import "./App.css";
 import myIcon from "./assets/github-mark.png";
-import myIcon2 from "./assets/control.png";
+import myIcon2 from "./assets/joystick.png";
 import myIcon3 from "./assets/medal.png";
 import myIcon4 from "./assets/graph.png";
 import myIcon5 from "./assets/brush.png";
