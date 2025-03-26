@@ -69,7 +69,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("./assets/oskari.gif"); /* Path to your image */
+  background-image: url("./assets/Selfpotrait1.gif"); /* Path to your image */
   background-size: cover; /* Cover the entire screen */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repetition */
